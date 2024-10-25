@@ -1,0 +1,32 @@
+<div class="flex h-full">
+  <div
+    class="px-4 border-e border-light-200 bg-light-200/30 flex flex-col py-4"
+  >
+    <div class="py-6 border-b border-light-200">
+      <img
+        src="/assets/logoIcon.png"
+        alt="logo"
+        width="{40}"
+        height="{40}"
+        class="mx-auto"
+      />
+    </div>
+    <div class="flex justify-between items-center h-full flex-col pt-6">
+      <div class="flex h-fit flex-col gap-6">
+        <a
+          *ngFor="let icon of sideBar"
+          appIconButton
+          routerLinkActive="active"
+          [routerLink]="icon.href"
+        >
+          <mat-icon>{{ icon.icon }}</mat-icon>
+        </a>
+      </div>
+      <div class="flex h-fit flex-col gap-6">
+        <button appIconButton (click)="logout()">
+          <mat-icon>logout</mat-icon>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

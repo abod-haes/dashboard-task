@@ -1,0 +1,31 @@
+<div class="flex items-center justify-between p-4 w-fit gap-6 mx-auto">
+  <button
+    class="'cursor-pointer transition-all w-[30px] h-[30px] border rounded-full relative flex justify-center items-center bg-mainBlue hover:bg-mainBlue/50 text-white ';"
+    (click)="previousPage()"
+    [disabled]="currentPage === 1"
+  >
+    <mat-icon
+      style="width: 20px; height: 20px; font-size: medium; display: flex"
+      class="w-[10px] h-[10px] flex items-center justify-center"
+    >
+      arrow_back_ios
+    </mat-icon>
+  </button>
+
+  <div class="flex items-center space-x-2">
+    <span class="text-sm">Page {{ currentPage }} of {{ totalPages }}</span>
+  </div>
+
+  <button
+    (click)="nextPage()"
+    [disabled]="currentPage === totalPages"
+    class="'cursor-pointer transition-all w-[30px] h-[30px] border rounded-full relative flex justify-center items-center bg-mainBlue hover:bg-mainBlue/50 text-white ';"
+  >
+    <mat-icon
+      style="width: 20px; height: 20px; font-size: medium; display: flex"
+      class="w-[10px] h-[10px] flex items-center justify-center"
+    >
+      arrow_forward_ios
+    </mat-icon>
+  </button>
+</div>

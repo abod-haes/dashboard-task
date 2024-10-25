@@ -1,0 +1,14 @@
+<div
+  class="flex w-full justify-between app-container py-2 border-b border-light-200 bg-light-200/30 items-center"
+>
+  <div class="w-10 h-10 rounded-full bg-light-200"></div>
+  <div class="flex items-center gap-2">
+    <mat-icon class="text-light-100">search</mat-icon>
+    <input
+      type="text"
+      appInput
+      placeholder="search"
+      (input)="onSearch($event)"
+    />
+  </div>
+</div>
